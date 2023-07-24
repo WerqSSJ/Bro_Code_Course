@@ -1,0 +1,31 @@
+
+
+#include <iostream>
+#include <ctime>
+
+
+int main()
+{
+    int num;
+    int gess;
+    int tries = 0;
+    std::cout<<"________________________________Gessing_Game_________________________________________\n";
+    srand(time(NULL));
+    num = rand() % 100 + 1;
+    do{
+        std::cout<<"Gess the  number : ";
+        std::cin >>gess;
+        if(gess > num){
+            std::cout<<"Too high\n";
+        }
+        else{
+            std::cout<<"Too low\n";
+        }
+        tries+=1;
+        
+        
+    }while(num != gess);
+    std::cout<<"It took you "<<tries<<" tries!\n";
+    std::cout<<"And u won nothing";
+    return 0;
+}
