@@ -58,7 +58,7 @@ getcomputerschoise ()
       return 'R';
       break;
     case 2:
-      return 'p';
+      return 'P';
       break;
     case 3:
       return 'S';
@@ -76,7 +76,7 @@ showplayerschoise (char choise)
     case 'R':
       std::cout << "Rock\n";
       break;
-    case 'p':
+    case 'P':
       std::cout << "Paper\n";
       break;
     case 'S':
