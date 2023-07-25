@@ -1,0 +1,33 @@
+#include <iostream>
+
+int main(){
+    std::string questions[] = {"1.What is the largest animal in the world? ",
+                               "2.What country is locadet betwen Poland and France? ",
+                               "3.What is the most famous social media platform created by Mark Zuckerburg",
+                               "4.What is the Capital of Spain?"};
+     std::string answers[][4] = {{"A.Blue Whale ","B.Grizzlie bear","C.Great white shark","D.Giraffe"},
+                                {"A.Netherlands","B.Spain","C.Germany","D.Italy"},
+                                {"A.Twitter","B.Snapchat","C.Tick Tok","D.Facebook"},
+                                {"A.Berlin","B.Madrid","C.Paris","D.Moskow"}};
+     
+    char answersKey[] = {'A','C','D','B'};
+    int size = sizeof(questions)/sizeof(questions[0]);
+    char gess;
+    int score;
+    for(int i = 0 ; i < size ; i++){
+        std::cout<<"**********************************\n";
+        std::cout<<questions[i]<<"\n";
+        std::cout<<"**********************************\n";
+        for(int j = 0; j < sizeof(answers[i])/sizeof(answers[i][0]) ;j++){
+             std::cout<<answers[i][j]<<"\n";
+             
+        }
+        std::cin>>gess;
+        gess = toupper(gess);
+        if(gess == answersKey[i]){
+            score++;
+        }
+     }
+    std::cout<<"You scored "<<score<<" out of 4";
+    return 0;
+}
